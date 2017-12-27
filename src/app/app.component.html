@@ -1,0 +1,44 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Aplikasi e-KTP - Dev</span>
+    <span class="_spacer"></span>
+    <button mat-button>About</button>
+    <button mat-button>Services</button>
+    <button mat-button>Contact</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-accordion>
+  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-description>
+        Type your e-KTP
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-form-field hintLabel="Max 16 characters of Numeric">
+      <input type="text" matInput (keyup)="inputNoNik($event)" placeholder="no e-KTP" [maxLength]=16>
+    </mat-form-field>
+    <mat-card-actions>
+      <button mat-button (click)="postProfile()">Searching</button>
+      <mat-spinner [style.display]="showSpinner? 'block' : 'none'"></mat-spinner>
+    </mat-card-actions>
+    <mat-panel-description>
+      <mat-error>
+        {{ErrMessage}}
+      </mat-error>
+    </mat-panel-description>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<p>
+    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Link with href
+    </a>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Button with data-target
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+    </div>
+  </div>
