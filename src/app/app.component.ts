@@ -42,9 +42,9 @@ export class AppComponent implements OnInit {
 
       const bodyParam = {
         NIK: `${this.noNIK}`,
-        ip_user: '10.161.25.38',
-        user_id: '112520602t531',
-        password: 'LdJPZyrQ'
+        ip_user: 'ip',
+        user_id: 'user',
+        password: 'pass'
       }
 
       this.httpClient.post<ResponDukcapil>("http://172.16.160.128:8000/dukcapil/get_json/bank_ntb/call_nik", bodyParam)
